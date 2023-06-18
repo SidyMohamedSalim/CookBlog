@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <section className="bg-head-bg bg-cover  ">
         <div className="bg-[rgba(0,0,0,0.4)] text-white max-xl:px-3">
           <div className="max-w-4xl mx-auto flex items-center justify-between py-5  sm:min-h-[50vh] relative max-md:justify-center">
@@ -399,6 +399,6 @@ export default function Home() {
           </p>
         </div>
       </footer>
-    </div>
+    </>
   );
 }

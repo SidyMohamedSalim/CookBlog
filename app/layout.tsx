@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden">
-        <div className="mx-auto font-tangerine">
+      <body className="overflow-x-hidden ">
+        <div className="mx-auto font-tangerine w-[100vw] overflow-x-hidden">
           <Header />
           {children}
         </div>

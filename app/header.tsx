@@ -21,6 +21,12 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
+
+              <li className="px-3 text-sm text-red-600 bg-white rounded-sm">
+                <Link className="hover:text-orange-600" href={"/admin"}>
+                  Admin
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
