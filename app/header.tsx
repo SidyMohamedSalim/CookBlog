@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-head-bg bg-cover">
       <div className="bg-[rgba(0,0,0,0.2)]">
-        <div className="flex justify-between items-center max-w-3xl mx-auto pt-2">
+        <div className="flex justify-between items-center max-w-3xl mx-auto pt-3">
           <div>
             <h1 className="font-bold italic text-lg">Bestiste</h1>
           </div>
@@ -23,7 +23,7 @@ const Header = () => {
           </nav>
         </div>
         {/* home  */}
-        <div className="max-w-3xl mx-auto flex items-center justify-between py-5  min-h-[30vh]">
+        <div className="max-w-3xl mx-auto flex items-center justify-between py-5  sm:min-h-[50vh]">
           {/* left */}
           <div className="z-10">
             <h1 className="text-4xl py-6 font-bold space-y-2">
