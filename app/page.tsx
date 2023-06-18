@@ -290,6 +290,85 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contacts Section */}
+      <section className="max-w-4xl max-xl:px-3 mx-auto text-center py-20">
+        <div className="bg-orange-400 mx-auto flex flex-col max-w-2xl rounded-lg shadow-md py-8">
+          <h1 className="text-3xl py-3 text-white">
+            Be the first to get update of New Classes
+          </h1>
+          <form action="" className="flex items-center justify-center my-5">
+            <input
+              type="email"
+              placeholder="Your email"
+              className="w-[60%] h-10 rounded-sm border-none z-0 px-3 bg-slate-100 "
+            />
+            <input
+              type="button"
+              value="Subscribe Now"
+              className="h-10 bg-white rounded-lg -ml-3 z-20 text-xs px-8"
+            />
+          </form>
+        </div>
+      </section>
+
+      {/* footer */}
+      <footer className="max-w-4xl max-xl:px-3 mx-auto text-center pt-20 pb-5">
+        <div className="flex justify-evenly gap-2 text-start">
+          {/* Contact */}
+          <div className="px-3">
+            <h1 className="font-bold text-xl py-4">Contact</h1>
+            <ul className="text-xs font-sans font-light">
+              <li className="py-1"> Street New York Usa</li>
+              <li className="py-1">066 44 12 093</li>
+              <li className="py-1">contact@food.com</li>
+              <li className="py-1">www.adsa.com</li>
+            </ul>
+            {/* icons ..... */}
+          </div>
+          {/* Information */}
+          <div className="px-3">
+            <h1 className="font-bold text-xl py-4">Information</h1>
+            <ul className="text-xs font-sans font-light">
+              <li className="py-1">New Products</li>
+              <li className="py-1">Top Sellers</li>
+              <li className="py-1">Our Blog</li>
+              <li className="py-1">About</li>
+              <li className="py-1">Secure Shopping</li>
+            </ul>
+          </div>
+          {/* Account */}
+          <div className="px-3">
+            <h1 className="font-bold text-xl py-4">Account</h1>
+            <ul className="text-xs font-sans font-light">
+              <li className="py-1">My Account</li>
+              <li className="py-1">Personal Information</li>
+              <li className="py-1">Adresse</li>
+              <li className="py-1">Discount</li>
+              <li className="py-1">Order History</li>
+            </ul>
+          </div>
+          {/* Instagram */}
+          <div className="px-3">
+            <h1 className="font-bold text-xl py-4">Others</h1>
+            <ul className="text-xs font-sans font-light">
+              <li className="py-1">Promo</li>
+              <li className="py-1">Partenariats</li>
+              <li className="py-1">Why Me ?</li>
+              <li className="py-1">Politiques</li>
+              <li className="py-1">Securité</li>
+            </ul>
+            {/* icons ..... */}
+          </div>
+        </div>
+
+        <div className="border-t  mt-4 pt-3">
+          <p className="text-xs font-light ">
+            copyright 2023 powered by{" "}
+            <span className="text-orange-600">Salim Diallo</span>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
