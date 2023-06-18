@@ -11,11 +11,7 @@ export const links = [
   },
   {
     name: "Blog",
-    href: "/blog",
-  },
-  {
-    name: "About",
-    href: "/about",
+    href: "/articles",
   },
   {
     name: "About",
