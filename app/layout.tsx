@@ -1,9 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Header from "./header";
-import { Ggradient } from "@/components/gradient";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Salim Diallo",

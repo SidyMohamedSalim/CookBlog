@@ -109,11 +109,7 @@ export default function Home() {
           {/* grid 2 */}
           <div className=" rounded-md shadow-2xl max-md:col-span-2">
             <div className="w-[100%]">
-              <img
-                src="/img2.jpg"
-                alt=""
-                className="rounded-md h-40 w-[100%]"
-              />
+              <img src="/img2.jpg" alt="" className="rounded-md w-[100%]" />
             </div>
             <div className="px-2 py-2 text-start">
               <h1 className="font-bold py-3 text-sm">
@@ -165,11 +161,7 @@ export default function Home() {
           {/* grid 4 */}
           <div className=" rounded-md shadow-2xl max-md:col-span-2">
             <div className="w-[100%]">
-              <img
-                src="/img4.jpg"
-                alt=""
-                className="rounded-md h-40 w-[100%]"
-              />
+              <img src="/img4.jpg" alt="" className="rounded-md w-[100%]" />
             </div>
             <div className="px-2 py-2 text-start">
               <h1 className="font-bold py-3 text-sm">
@@ -194,11 +186,7 @@ export default function Home() {
           {/* grid 5 */}
           <div className=" rounded-md shadow-2xl max-md:col-span-2">
             <div className="w-[100%]">
-              <img
-                src="/img5.jpg"
-                alt=""
-                className="rounded-md h-40 w-[100%]"
-              />
+              <img src="/img5.jpg" alt="" className="rounded-md w-[100%]" />
             </div>
             <div className="px-2 py-2 text-start">
               <h1 className="font-bold py-3 text-sm">
@@ -223,11 +211,7 @@ export default function Home() {
           {/* grid 6 */}
           <div className=" rounded-md shadow-2xl max-md:col-span-2">
             <div className="w-[100%]">
-              <img
-                src="/img6.jpg"
-                alt=""
-                className="rounded-md h-40 w-[100%]"
-              />
+              <img src="/img6.jpg" alt="" className="rounded-md w-[100%]" />
             </div>
             <div className="px-2 py-2 text-start">
               <h1 className="font-bold py-3 text-sm">
