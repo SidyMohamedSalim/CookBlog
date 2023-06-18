@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import { siteConfig } from "../../config/site";
+import { links } from "../src/config/site";
 
 const Header = () => {
   return (
-    <header className="bg-head-bg bg-cover  ">
+    <div className="bg-head-bg bg-cover  ">
       <div className="bg-[rgba(0,0,0,0.4)] text-white max-xl:px-3">
         <div className="flex justify-between items-center max-w-4xl mx-auto pt-3">
           <div>
@@ -14,7 +14,7 @@ const Header = () => {
           </div>
           <nav>
             <ul className="decoration-none flex justify-evenly font-tangerine">
-              {siteConfig.map((link) => (
+              {links.map((link) => (
                 <li className="px-3 text-sm">
                   <Link className="hover:text-orange-600" href={link.href}>
                     {link.name}
@@ -52,7 +52,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
