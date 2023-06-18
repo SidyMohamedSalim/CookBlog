@@ -365,7 +365,7 @@ export default function Home() {
         <div className="border-t  mt-4 pt-3">
           <p className="text-xs font-light ">
             copyright 2023 powered by{" "}
-            <span className="text-orange-600">Salim Diallo</span>
+            <span className="text-orange-600 font-bold">Salim Diallo</span>
           </p>
         </div>
       </footer>
