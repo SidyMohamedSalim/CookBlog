@@ -15,7 +15,7 @@ const Header = () => {
           <nav>
             <ul className="decoration-none flex justify-evenly font-tangerine">
               {links.map((link) => (
-                <li className="px-3 text-sm">
+                <li className="px-3 text-sm" key={link.name}>
                   <Link className="hover:text-orange-600" href={link.href}>
                     {link.name}
                   </Link>
@@ -24,7 +24,6 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        {/* home  */}
       </div>
     </div>
   );
