@@ -4,14 +4,16 @@ import { siteConfig } from "../../config/site";
 
 const Header = () => {
   return (
-    <header className="bg-head-bg bg-cover">
-      <div className="bg-[rgba(0,0,0,0.2)]">
-        <div className="flex justify-between items-center max-w-3xl mx-auto pt-3">
+    <header className="bg-head-bg bg-cover  ">
+      <div className="bg-[rgba(0,0,0,0.4)] text-white max-xl:px-3">
+        <div className="flex justify-between items-center max-w-4xl mx-auto pt-3">
           <div>
-            <h1 className="font-bold italic text-lg">Bestiste</h1>
+            <h1 className="font-extrabold italic text-2xl font-tangerine">
+              Bestiste
+            </h1>
           </div>
           <nav>
-            <ul className="decoration-none flex justify-evenly">
+            <ul className="decoration-none flex justify-evenly font-tangerine">
               {siteConfig.map((link) => (
                 <li className="px-3 text-sm">
                   <Link className="hover:text-orange-600" href={link.href}>
@@ -23,10 +25,10 @@ const Header = () => {
           </nav>
         </div>
         {/* home  */}
-        <div className="max-w-3xl mx-auto flex items-center justify-between py-5  sm:min-h-[50vh] relative">
+        <div className="max-w-4xl mx-auto flex items-center justify-between py-5  sm:min-h-[50vh] relative max-md:justify-center">
           {/* left */}
           <div className="z-10">
-            <h1 className="text-4xl py-6 font-bold space-y-2 text-white">
+            <h1 className="text-4xl py-6 font-bold space-y-2 text-white font-tangerine">
               Master The <br />
               Culinary Arts Today
             </h1>
@@ -45,7 +47,7 @@ const Header = () => {
             <p className="text-sm py-2">Get Your free Cooking Books</p>
           </div>
           {/* Rigth */}
-          <div className="absolute bottom-0 -right-32 h-[40vh] ">
+          <div className="absolute bottom-0 -right-32 h-[40vh] max-md:hidden max-lg:-right-20 ">
             <img src="/chef.svg" alt={""} className="w-[100%] h-[40vh]" />
           </div>
         </div>
