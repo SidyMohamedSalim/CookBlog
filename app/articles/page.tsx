@@ -1,7 +1,7 @@
+import { article } from "@prisma/client";
 import Link from "next/link";
 import React from "react";
 import { prisma } from "../../src/db/prisma";
-import { article } from "../../src/types/article";
 
 const page = async () => {
   const articles: article[] = await prisma.article.findMany({});
@@ -28,7 +28,15 @@ const page = async () => {
           {articles.map((article) => (
             <Link href={"/articles/" + article.id}>
               <div className="text-start w-fit shadow-2xl rounded-xl pb-6">
-                <img src={article.image} alt="" className="rounded-xl " />
+                <img
+                  src={
+                    article.image
+                      ? article.image
+                      : `images/${article.title}.png`
+                  }
+                  alt=""
+                  className="rounded-xl "
+                />
                 <h1 className="font-tangerine text-2xl font-bold pt-4 pb-2 px-4">
                   {article.title}
                 </h1>
