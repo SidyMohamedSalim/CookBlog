@@ -344,7 +344,7 @@ export default function Home() {
 
       {/* footer */}
       <footer className="max-w-4xl max-xl:px-3 mx-auto text-center pt-20 pb-5">
-        <div className="flex justify-evenly gap-2 text-start">
+        <div className="grid grid-cols-2  md:grid-cols-4 justify-center gap-2">
           {/* Contact */}
           <div className="px-3">
             <h1 className="font-bold text-xl py-4">Contact</h1>
