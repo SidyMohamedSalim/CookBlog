@@ -1,10 +1,10 @@
 import React from "react";
 import { prisma } from "../../../src/db/prisma";
 
-const page = async ({ params }: { params: { articleId: string } }) => {
+const page = async ({ params }: { params: { id: string } }) => {
   const article = await prisma.article.findUnique({
     where: {
-      id: params.articleId,
+      id: params.id,
     },
   });
 
@@ -30,7 +30,9 @@ const page = async ({ params }: { params: { articleId: string } }) => {
 
         <div className="text-start font-sans font-light text-sm">
           <p className="py-3">{article.description}</p>
-          <p className="py-3">{article.content}</p>
+          <p className="py-3 indent-6 text">
+            <pre>{article.content}</pre>
+          </p>
         </div>
         {author && (
           <h1 className="text-end py-5 font-light">

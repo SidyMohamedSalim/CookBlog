@@ -18,7 +18,7 @@ const FormAdd = () => {
       if (!selectedFile) return;
       const formData = new FormData();
       formData.append("myImage", selectedFile);
-      const { data } = await axios.post(`/api/${name}`, formData);
+      const { data } = await axios.post(`/api/articles/new/${name}`, formData);
       console.log(data);
     } catch (error: any) {
       console.log(error.response?.data);
@@ -40,7 +40,7 @@ const FormAdd = () => {
 
     await handleUpload(article.title);
 
-    fetch("/api", { method: "POST", body: JSON.stringify(article) })
+    fetch("/api/articles", { method: "POST", body: JSON.stringify(article) })
       .then((res) => res.json())
       .then((json) => {
         router.refresh();

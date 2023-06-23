@@ -2,7 +2,7 @@ import { article } from "@prisma/client";
 import { NextApiRequest, NextApiResponse } from "next";
 import { json } from "node:stream/consumers";
 import { z } from "zod";
-import { prisma } from "../../src/db/prisma";
+import { prisma } from "../../../src/db/prisma";
 
 const articleScheme = z.object({
   title: z.string(),
@@ -39,6 +39,19 @@ export default async function handler(
 
     res.status(200).json({ articles: article });
   } else if (req.method === "PATCH") {
+    const data = JSON.parse(req.body);
+    const NewData = articleScheme.parse(data);
+
+    const article: article = await prisma.article.update({
+      where: {
+        id: req.query.articleId as string,
+      },
+      data: {
+        ...NewData,
+      },
+    });
+
+    res.status(200).json({ articles: article });
   } else if (req.method === "DELETE") {
   }
 }
