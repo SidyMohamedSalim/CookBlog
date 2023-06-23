@@ -1,4 +1,5 @@
 "use client";
+import { client } from "@/src/lib/client/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -10,8 +11,7 @@ const ButtonDelete = ({ articleId }: { articleId: string }) => {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
-    await axios
-      .delete(`/api/articles/${articleId}`)
+    await client(`/api/articles/${articleId}`, { method: "DELETE" })
       .then((json) => {
         console.log(articleId);
 
@@ -23,7 +23,7 @@ const ButtonDelete = ({ articleId }: { articleId: string }) => {
   };
   return (
     <button
-      className="bg-red-300 px-4 py-2 hover:bg-red-500"
+      className="text-red-500 px-4 py-2 hover:text-red-900"
       onClick={(e) => onclick(e)}
     >
       x

@@ -32,19 +32,12 @@ const page = async () => {
         <h1>
           <Link
             className="border-b text-sky-400 border-sky-400 hover:text-sky-900"
-            href={"/admin/modify"}
+            href={"/admin/edit"}
           >
-            Modifier un Article
+            Modifier ou Suprimer un Article
           </Link>
         </h1>
-        <h1>
-          <Link
-            className="border-b text-sky-400 border-sky-400 hover:text-sky-900"
-            href={"/admin/delete"}
-          >
-            Supprimer Un Article
-          </Link>
-        </h1>
+        <h1></h1>
       </ul>
     </div>
   );

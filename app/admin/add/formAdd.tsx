@@ -5,6 +5,7 @@ import { FormEvent } from "react";
 import { article } from "../../../src/types/article";
 import { useState } from "react";
 import axios from "axios";
+import { client } from "@/src/lib/client/client";
 
 const FormAdd = () => {
   const [uploading, setUploading] = useState(false);
@@ -23,7 +24,6 @@ const FormAdd = () => {
     } catch (error: any) {
       console.log(error.response?.data);
     }
-    setUploading(false);
   };
 
   const addArticle = async (e: FormEvent<HTMLFormElement>) => {
@@ -40,12 +40,14 @@ const FormAdd = () => {
 
     await handleUpload(article.title);
 
-    fetch("/api/articles", { method: "POST", body: JSON.stringify(article) })
-      .then((res) => res.json())
-      .then((json) => {
-        router.refresh();
-        router.push("/admin");
-      });
+    client("/api/articles", {
+      method: "POST",
+      data: JSON.stringify(article),
+    }).then((json) => {
+      setUploading(false);
+      router.refresh();
+      router.push("/admin");
+    });
   };
   return (
     <div>
@@ -131,7 +133,7 @@ const FormAdd = () => {
         <input
           type="submit"
           value={uploading ? "uploading..." : "Ajouter"}
-          className="bg-orange-400 px-6 py-3 text-white font-bold rounded-md hover:bg-orange-500"
+          className="bg-orange-400 px-6 py-3 text-white font-bold rounded-md hover:bg-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
         />
       </form>
     </div>

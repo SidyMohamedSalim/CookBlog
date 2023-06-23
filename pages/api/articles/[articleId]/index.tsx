@@ -28,6 +28,7 @@ export default async function handler(
         id: query.articleId,
       },
     });
+    console.log(query);
 
     const article: article = await prisma.article.update({
       where: {
@@ -42,7 +43,6 @@ export default async function handler(
     res.status(200).json({ articles: article });
   } else if (req.method === "DELETE") {
     const query = queryScheme.parse(req.query);
-    console.log(query);
 
     await prisma.article.delete({
       where: {
