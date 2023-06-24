@@ -35,3 +35,10 @@ model author {
   updatedAt DateTime  @updatedAt
   article   article[]
 }
+
+model emails {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
