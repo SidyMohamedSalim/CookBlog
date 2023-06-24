@@ -1,6 +1,4 @@
 import EmailForm from "@/components/email";
-import Image from "next/image";
-import Link from "next/link";
 import { prisma } from "../src/db/prisma";
 
 export default async function Home() {
