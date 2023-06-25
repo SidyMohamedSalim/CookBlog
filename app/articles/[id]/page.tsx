@@ -18,6 +18,8 @@ const page = async ({ params }: { params: { id: string } }) => {
     return <div>Article not found</div>;
   }
 
+  const paragraphs = article.content.split("/");
+
   return (
     <div>
       <section className="max-w-4xl max-xl:px-3 mx-auto text-center pt-32 pb-7 ">
@@ -30,9 +32,9 @@ const page = async ({ params }: { params: { id: string } }) => {
 
         <div className="text-start font-sans font-light text-sm">
           <p className="py-3">{article.description}</p>
-          <p className="py-3 indent-6 text">
-            <pre>{article.content}</pre>
-          </p>
+          {paragraphs.map((para) => (
+            <p className="py-3 indent-6 text-lg">{para}</p>
+          ))}
         </div>
         {author && (
           <h1 className="text-end py-5 font-light">

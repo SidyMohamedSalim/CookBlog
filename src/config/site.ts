@@ -1,5 +1,5 @@
 export const configSite = {
-  name: "My Site",
+  name: "Food it",
   description: "My site description",
   keywords: "my, site, keywords",
 };
@@ -16,9 +16,5 @@ export const links = [
   {
     name: "About",
     href: "/about",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
   },
 ];

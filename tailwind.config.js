@@ -15,7 +15,7 @@ module.exports = {
         img: "url('/images.jpeg')",
       },
       fontFamily: {
-        tangerine: ["Tangerine", "cursive"],
+        tangerine: ["Academy Engraved LET", "cursive"],
       },
     },
   },

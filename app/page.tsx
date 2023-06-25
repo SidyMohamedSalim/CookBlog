@@ -1,4 +1,5 @@
 import EmailForm from "@/components/email";
+import Link from "next/link";
 import { prisma } from "../src/db/prisma";
 
 export default async function Home() {
@@ -109,10 +110,13 @@ export default async function Home() {
             if (index === 0) {
               /* grid 1 */
               return (
-                <div className="col-span-4 row-span-1 rounded-md shadow-2xl flex justify-between ">
+                <Link
+                  href={`articles/${article.id}`}
+                  className="col-span-4 row-span-1 rounded-md shadow-2xl flex justify-between "
+                >
                   <div className="w-[200%]">
                     <img
-                      src={article.image ?? `/images${article.title}`}
+                      src={article.image ?? `/images${article.title}.png`}
                       alt={article.title}
                       className="w-full h-full rounded-md"
                     />
@@ -136,15 +140,18 @@ export default async function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             } else if (index === 2) {
               /* grid 3 */
               return (
-                <div className="col-span-2 row-span-2 rounded-md shadow-2xl">
+                <Link
+                  href={`articles/${article.id}`}
+                  className="col-span-2 row-span-2 rounded-md shadow-2xl"
+                >
                   <div className="w-full">
                     <img
-                      src={article.image ?? `/images${article.title}`}
+                      src={article.image ?? `/images${article.title}.png`}
                       alt={article.title}
                       className="rounded-md"
                     />
@@ -168,15 +175,18 @@ export default async function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             } else {
               return (
                 /* grid 2 */
-                <div className=" rounded-md shadow-2xl max-md:col-span-2">
+                <Link
+                  href={`articles/${article.id}`}
+                  className=" rounded-md shadow-2xl max-md:col-span-2"
+                >
                   <div className="w-[100%]">
                     <img
-                      src={article.image ?? `/images${article.title}`}
+                      src={article.image ?? `/images${article.title}.png`}
                       alt={article.title}
                       className="rounded-md w-[100%]"
                     />
@@ -200,7 +210,7 @@ export default async function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             }
           })}
@@ -217,10 +227,13 @@ export default async function Home() {
         <div className="flex justify-between max-sm:flex-wrap">
           {/* news bloc */}
           {newArticles.map((article, index) => (
-            <div className="mx-4 shadow-2xl max-sm:my-5 sm:w-[35%]">
+            <Link
+              href={`articles/${article.id}`}
+              className="mx-4 shadow-2xl max-sm:my-5 sm:w-[35%]"
+            >
               <div>
                 <img
-                  src={article.image ?? `/images/${article.title}`}
+                  src={article.image ?? `./images/${article.title}.png`}
                   alt={article.title}
                   className="rounded-md sm:w-[100]"
                 />
@@ -231,7 +244,7 @@ export default async function Home() {
                   {article.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

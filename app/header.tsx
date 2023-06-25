@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { links } from "../src/config/site";
+import { links, configSite } from "../src/config/site";
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex justify-between items-center max-w-4xl mx-auto pt-3">
           <div>
             <h1 className="font-extrabold italic text-2xl font-tangerine">
-              Bestiste
+              {configSite.name}
             </h1>
           </div>
           <nav>
