@@ -136,6 +136,7 @@ export default async function Home() {
               /* grid 1 */
               return (
                 <Link
+                  key={article.id}
                   href={`articles/${article.id}`}
                   className="col-span-4 row-span-1 rounded-md shadow-2xl flex justify-between "
                 >
@@ -156,7 +157,7 @@ export default async function Home() {
                     <div className="flex mt-5">
                       <Image
                         width={800}
-                        width={800}
+                        height={800}
                         src="/avatar.jpg"
                         alt=""
                         className="w-10 h-10 rounded-full"
@@ -175,6 +176,7 @@ export default async function Home() {
               /* grid 3 */
               return (
                 <Link
+                  key={article.id}
                   href={`articles/${article.id}`}
                   className="col-span-2 row-span-2 rounded-md shadow-2xl"
                 >
@@ -214,6 +216,7 @@ export default async function Home() {
               return (
                 /* grid 2 */
                 <Link
+                  key={article.id}
                   href={`articles/${article.id}`}
                   className=" rounded-md shadow-2xl max-md:col-span-2"
                 >
@@ -265,6 +268,7 @@ export default async function Home() {
           {/* news bloc */}
           {newArticles.map((article, index) => (
             <Link
+              key={article.id}
               href={`articles/${article.id}`}
               className="mx-4 shadow-2xl max-sm:my-5 sm:w-[35%]"
             >
