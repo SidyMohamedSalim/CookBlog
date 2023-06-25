@@ -291,12 +291,11 @@ export default async function Home() {
           ))}
         </div>
       </section>
-
       {/* Contacts Section */}
       <section className="max-w-4xl max-xl:px-3 mx-auto text-center py-20">
         <div className="bg-orange-400 mx-auto flex flex-col max-w-2xl rounded-lg shadow-md py-8">
           <h1 className="text-3xl py-3 text-white">
-            Be the first to get update of New Classes
+            Be the first to get update of New Classes of the word
           </h1>
           <EmailForm />
         </div>
