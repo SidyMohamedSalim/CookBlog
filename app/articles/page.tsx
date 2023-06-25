@@ -1,4 +1,5 @@
 import { article } from "@prisma/client";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { prisma } from "../../src/db/prisma";
@@ -28,7 +29,9 @@ const page = async () => {
           {articles.map((article) => (
             <Link href={"/articles/" + article.id} key={article.id}>
               <div className="text-start w-fit shadow-2xl rounded-xl pb-6">
-                <img
+                <Image
+                  width={300}
+                  height={300}
                   src={
                     article.image
                       ? article.image

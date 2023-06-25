@@ -1,4 +1,5 @@
 import EmailForm from "@/components/email";
+import Image from "next/image";
 import Link from "next/link";
 import { prisma } from "../src/db/prisma";
 
@@ -29,7 +30,13 @@ export default async function Home() {
             </div>
             {/* Rigth */}
             <div className="absolute bottom-0 -right-32 h-[40vh] max-md:hidden max-lg:-right-20 ">
-              <img src="/chef.svg" alt={""} className="w-[100%] h-[40vh]" />
+              <Image
+                width={1000}
+                height={1000}
+                src="/chef.svg"
+                alt={""}
+                className="w-[100%] h-[40vh]"
+              />
             </div>
           </div>
         </div>
@@ -232,7 +239,9 @@ export default async function Home() {
               className="mx-4 shadow-2xl max-sm:my-5 sm:w-[35%]"
             >
               <div>
-                <img
+                <Image
+                  width={1000}
+                  height={1000}
                   src={article.image ?? `./images/${article.title}.png`}
                   alt={article.title}
                   className="rounded-md sm:w-[100]"

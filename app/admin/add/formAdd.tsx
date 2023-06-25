@@ -6,6 +6,7 @@ import { article } from "../../../src/types/article";
 import { useState } from "react";
 import axios from "axios";
 import { client } from "@/src/lib/client/client";
+import Image from "next/image";
 
 const FormAdd = () => {
   const [uploading, setUploading] = useState(false);
@@ -81,7 +82,7 @@ const FormAdd = () => {
             <label className="flex flex-col w-full h-full border-4 border-orange-200 border-dashed hover:bg-gray-100 hover:border-gray-300">
               {selectedImage ? (
                 <div className="w-32 h-10">
-                  <img src={selectedImage} alt="" />
+                  <Image width={300} height={300} src={selectedImage} alt="" />
                 </div>
               ) : (
                 <div className="flex flex-col items-center justify-center pt-7">

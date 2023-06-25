@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { prisma } from "../../../src/db/prisma";
 
@@ -24,8 +25,10 @@ const page = async ({ params }: { params: { id: string } }) => {
     <div>
       <section className="max-w-4xl max-xl:px-3 mx-auto text-center pt-32 pb-7 ">
         <h1 className="text-4xl font-bold py-6">type {article.title}</h1>
-        <img
-          src={article.image ? article.image : `/images/${article.title}.png`}
+        <Image
+          width={800}
+          height={800}
+          src={article.image ?? `/images/${article.title}.png`}
           alt=""
           className="mx-auto rounded-md"
         />
