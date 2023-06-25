@@ -1,6 +1,5 @@
 "use client";
 import { client } from "@/src/lib/client/client";
-import Toastify from "toastify-js";
 import React from "react";
 
 export default function EmailForm({ typeEmail = 0 }: { typeEmail?: number }) {
@@ -13,38 +12,38 @@ export default function EmailForm({ typeEmail = 0 }: { typeEmail?: number }) {
       data: JSON.stringify({ email }),
     })
       .then(() => {
-        Toastify({
-          text: "Thank you for subscribing to our newsletter!",
-          duration: 3000,
-          style: {
-            background: "black",
-            color: "#A2FF86",
-            fontSize: "1.5rem",
-            padding: "1rem",
-            close: true,
-            width: "100%",
-            position: "fixed",
-            top: "0rem",
-          },
-        }).showToast();
+        // Toastify({
+        //   text: "Thank you for subscribing to our newsletter!",
+        //   duration: 3000,
+        //   style: {
+        //     background: "black",
+        //     color: "#A2FF86",
+        //     fontSize: "1.5rem",
+        //     padding: "1rem",
+        //     close: true,
+        //     width: "100%",
+        //     position: "fixed",
+        //     top: "0rem",
+        //   },
+        // }).showToast();
         e.currentTarget.clear();
       })
       .catch((err) => {
         console.error(err);
-        Toastify({
-          text: "Something went wrong, please try again later.",
-          duration: 3000,
-          style: {
-            background: "black",
-            color: "#FF2171",
-            fontSize: "1.5rem",
-            padding: "1rem",
-            close: true,
-            width: "100%",
-            position: "fixed",
-            top: "0rem",
-          },
-        }).showToast();
+        // Toastify({
+        //   text: "Something went wrong, please try again later.",
+        //   duration: 3000,
+        //   style: {
+        //     background: "black",
+        //     color: "#FF2171",
+        //     fontSize: "1.5rem",
+        //     padding: "1rem",
+        //     close: true,
+        //     width: "100%",
+        //     position: "fixed",
+        //     top: "0rem",
+        //   },
+        // }).showToast();
       });
   };
 

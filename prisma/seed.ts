@@ -6,18 +6,18 @@ import { article } from "../src/types/article";
 const prisma = new PrismaClient();
 
 const main = async () => {
-  //   const author = {
-  //     id: faker.string.uuid(),
-  //     email: faker.internet.email(),
-  //     password: faker.internet.password(),
-  //     isAdmin: true,
-  //     name: faker.person.firstName(),
-  //     updatedAt: faker.date.recent(),
-  //   };
+  const author = {
+    id: faker.string.uuid(),
+    email: faker.internet.email(),
+    password: faker.internet.password(),
+    isAdmin: true,
+    name: faker.person.firstName(),
+    updatedAt: faker.date.recent(),
+  };
 
-  //   await prisma.author.create({
-  //     data: author,
-  //   });
+  await prisma.author.create({
+    data: author,
+  });
 
   const authorId = await prisma.author.findFirst({});
 

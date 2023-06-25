@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 import { useState } from "react";
 import axios from "axios";
-import { article } from "../../../../src/types/article";
 import { client } from "@/src/lib/client/client";
+import { article } from "@prisma/client";
 
 const FormModify = ({ article }: { article: article }) => {
   const [uploading, setUploading] = useState(false);
@@ -17,12 +17,11 @@ const FormModify = ({ article }: { article: article }) => {
     setUploading(true);
     const data = new FormData(e.currentTarget);
     const title = String(data.get("title"));
-    const newarticle: article = {
+    const newarticle = {
       title: title,
       description: String(data.get("description")),
       content: String(data.get("content")),
     };
-
     await client(`/api/articles/${article.id}/`, {
       method: "PATCH",
       data: JSON.stringify(newarticle),
@@ -52,7 +51,7 @@ const FormModify = ({ article }: { article: article }) => {
           className="border  px-3 w-[80%] text-black text-xl py-2 rounded-md border-gray-800 my-4"
         />
         <input
-          defaultValue={article.description}
+          defaultValue={article.description ?? ""}
           id="description"
           name="description"
           type="text"

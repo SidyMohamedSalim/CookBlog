@@ -26,7 +26,7 @@ const page = async () => {
         <div className=" grid grid-cols-4 gap-3 max-sm:grid-cols-2 max-lg:grid-cols-3 ">
           {/* article */}
           {articles.map((article) => (
-            <Link href={"/articles/" + article.id}>
+            <Link href={"/articles/" + article.id} key={article.id}>
               <div className="text-start w-fit shadow-2xl rounded-xl pb-6">
                 <img
                   src={

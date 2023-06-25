@@ -7,8 +7,8 @@ const page = async () => {
       <h1 className="font-bold text-2xl"> Ajout d'un Article</h1>
       <p className="italic  py-4 ">
         <span className="border-b border-black"> Directive:</span> A la fin de
-        chaque paragraphe mettre un slash{" "}
-        <span className="text-orange-600 font-extrabold">" / "</span>
+        chaque paragraphe mettre un slash
+        <span className="text-orange-600 font-extrabold"> &ldquo;</span>
       </p>
       <FormAdd />
     </div>
