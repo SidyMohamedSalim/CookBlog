@@ -36,8 +36,10 @@ const page = async ({ params }: { params: { id: string } }) => {
           <p className="py-3 text-center italic bg-slate-100 px-3 rounded-r-xl">
             {article.description}
           </p>
-          {paragraphs.map((para) => (
-            <p className="py-3 my-4 indent-6 text-lg">{para}</p>
+          {paragraphs.map((para, index) => (
+            <p key={index} className="py-3 my-4 indent-6 text-lg">
+              {para}
+            </p>
           ))}
         </div>
         {author && (
