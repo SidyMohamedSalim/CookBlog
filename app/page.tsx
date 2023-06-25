@@ -47,7 +47,9 @@ export default async function Home() {
           <div className="absolute left-0 -bottom-20 max-md:hidden">
             {/* content */}
             <div className="flex justify-evenly bg-orange-50 px-2 py-2 rounded-md my-3 shadow-2xl ">
-              <img
+              <Image
+                width={800}
+                height={800}
                 src="/avatar.jpg"
                 alt=""
                 className="rounded-full w-12 h-12 mr-2"
@@ -59,7 +61,9 @@ export default async function Home() {
             </div>
             {/* content */}
             <div className="flex justify-evenly bg-orange-50 px-2 py-2 rounded-md my-3 shadow-2xl ">
-              <img
+              <Image
+                width={800}
+                height={800}
                 src="/avatar.jpg"
                 alt=""
                 className="rounded-full w-12 h-12 mr-2"
@@ -71,7 +75,9 @@ export default async function Home() {
             </div>
             {/* content */}
             <div className="flex justify-evenly bg-orange-50 px-2 py-2 rounded-md my-3 shadow-2xl ">
-              <img
+              <Image
+                width={800}
+                height={800}
                 src="/avatar.jpg"
                 alt=""
                 className="rounded-full w-12 h-12 mr-2"
@@ -84,7 +90,13 @@ export default async function Home() {
           </div>
           <div className="w-[100%] max-md:hidden"></div>
           <div className="p-4">
-            <img className="w-10 h-10" src="/vercel.svg" alt="" />
+            <Image
+              width={800}
+              height={800}
+              className="w-10 h-10"
+              src="/vercel.svg"
+              alt=""
+            />
 
             <h1 className="font-bold py-4 text-md">Free Glass For Members</h1>
             <p className="text-xs font-light font-sans">
@@ -93,7 +105,13 @@ export default async function Home() {
             </p>
           </div>
           <div className="p-4">
-            <img className="w-10 h-10" src="/vercel.svg" alt="" />
+            <Image
+              className="w-10 h-10"
+              width={800}
+              height={800}
+              src="/vercel.svg"
+              alt=""
+            />
 
             <h1 className="font-bold py-4 text-md">Free Glass For Members</h1>
             <p className="text-xs font-light font-sans">
@@ -122,7 +140,9 @@ export default async function Home() {
                   className="col-span-4 row-span-1 rounded-md shadow-2xl flex justify-between "
                 >
                   <div className="w-[200%]">
-                    <img
+                    <Image
+                      width={800}
+                      height={800}
                       src={article.image ?? `/images${article.title}.png`}
                       alt={article.title}
                       className="w-full h-full rounded-md"
@@ -134,7 +154,9 @@ export default async function Home() {
                       {article.description}
                     </p>
                     <div className="flex mt-5">
-                      <img
+                      <Image
+                        width={800}
+                        width={800}
                         src="/avatar.jpg"
                         alt=""
                         className="w-10 h-10 rounded-full"
@@ -157,7 +179,9 @@ export default async function Home() {
                   className="col-span-2 row-span-2 rounded-md shadow-2xl"
                 >
                   <div className="w-full">
-                    <img
+                    <Image
+                      width={800}
+                      height={800}
                       src={article.image ?? `/images${article.title}.png`}
                       alt={article.title}
                       className="rounded-md"
@@ -169,7 +193,9 @@ export default async function Home() {
                       {article.description}
                     </p>
                     <div className="flex mt-5">
-                      <img
+                      <Image
+                        height={800}
+                        width={800}
                         src="/avatar.jpg"
                         alt=""
                         className="w-10 h-10 rounded-full"
@@ -192,7 +218,9 @@ export default async function Home() {
                   className=" rounded-md shadow-2xl max-md:col-span-2"
                 >
                   <div className="w-[100%]">
-                    <img
+                    <Image
+                      width={800}
+                      height={800}
                       src={article.image ?? `/images${article.title}.png`}
                       alt={article.title}
                       className="rounded-md w-[100%]"
@@ -204,7 +232,9 @@ export default async function Home() {
                       {article.description}
                     </p>
                     <div className="flex mt-1">
-                      <img
+                      <Image
+                        width={800}
+                        height={800}
                         src="/avatar.jpg"
                         alt=""
                         className="w-8 h-8 rounded-full"
