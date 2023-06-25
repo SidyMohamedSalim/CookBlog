@@ -16,6 +16,7 @@ module.exports = {
       },
       fontFamily: {
         tangerine: ["Academy Engraved LET", "cursive"],
+        logofont: ["Apple Chancery", "Brush Script MT", "serif"],
       },
     },
   },

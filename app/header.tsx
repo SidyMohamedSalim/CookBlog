@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { links, configSite } from "../src/config/site";
@@ -5,10 +6,17 @@ import { links, configSite } from "../src/config/site";
 const Header = () => {
   return (
     <div className="bg-head-bg bg-cover  ">
-      <div className="bg-[rgba(0,0,0,0.4)] text-white max-xl:px-3">
+      <div className="bg-[rgba(0,0,0,0.5)] text-white max-xl:px-3">
         <div className="flex justify-between items-center max-w-4xl mx-auto pt-3">
-          <div>
-            <h1 className="font-extrabold italic text-2xl font-tangerine">
+          <div className="flex flex-col justify-center items-center">
+            <Image
+              width={35}
+              height={50}
+              src={"/cookLogo.png"}
+              alt={"le logo de " + configSite.name}
+              className="rounded-lg"
+            />
+            <h1 className="font-bold italic font-logofont">
               {configSite.name}
             </h1>
           </div>
