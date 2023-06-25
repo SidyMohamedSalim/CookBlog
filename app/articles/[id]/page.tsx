@@ -32,14 +32,14 @@ const page = async ({ params }: { params: { id: string } }) => {
           alt=""
           className="mx-auto rounded-md"
         />
-        <div className="text-start font-sans font-light text-sm py-6">
+        {/* <div className="text-start font-sans font-light text-sm py-6">
           <p className="py-3 text-center italic bg-slate-100 px-3 rounded-r-xl">
-            "{article.description}"
+            {article.description}
           </p>
           {paragraphs.map((para) => (
             <p className="py-3 my-4 indent-6 text-lg">{para}</p>
           ))}
-        </div>
+        </div> */}
         {author && (
           <h1 className="text-end py-5 font-light">
             <p>Author : </p>
